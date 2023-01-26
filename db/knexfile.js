@@ -7,9 +7,11 @@ module.exports = {
   staging: {
     client: "mysql",
     connection: {
-      database: "my_db",
-      user: "username",
-      password: "password",
+      host: "127.0.0.1",
+      port: 3307,
+      database: "knex",
+      user: "root",
+      password: "twekl2020",
     },
     pool: {
       min: 2,

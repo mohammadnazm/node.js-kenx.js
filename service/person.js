@@ -3,7 +3,7 @@ const personDao = require("./personDao");
 class PersonService {
   createPerson(personDto) {
     const [firstName, lastName, email] = personDto;
-    personDao.createPerson(firstName, lastName, email);
+    return personDao.createPerson(firstName, lastName, email);
   }
 }
 

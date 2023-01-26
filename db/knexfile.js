@@ -4,21 +4,45 @@
  * @type { Object.<string, import("knex").Knex.Config> }
  */
 module.exports = {
+  development: {
+    client: "mysql",
+    connection: {
+      user: "root",
+      host: "localhost",
+      password: "twekl2020",
+      database: "knex",
+      port: 3306,
+    },
+    migrations: {
+      directory: __dirname + "/migrations",
+    },
+  },
+
   staging: {
     client: "mysql",
     connection: {
-      host: "127.0.0.1",
-      port: 3307,
-      database: "knex",
       user: "root",
+      host: "localhost",
       password: "twekl2020",
-    },
-    pool: {
-      min: 2,
-      max: 10,
+      database: "knex",
+      port: 3306,
     },
     migrations: {
-      tableName: "knex_migrations",
+      directory: __dirname + "/migrations",
+    },
+  },
+
+  production: {
+    client: "mysql",
+    connection: {
+      user: "root",
+      host: "localhost",
+      password: "twekl2020",
+      database: "knex",
+      port: 3306,
+    },
+    migrations: {
+      directory: __dirname + "/migrations",
     },
   },
 };

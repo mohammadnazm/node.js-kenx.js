@@ -2,6 +2,7 @@
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
+/* One To Many RelationShip */
 exports.up = function (knex) {
   return knex.schema
     .createTable("Car", function (t) {

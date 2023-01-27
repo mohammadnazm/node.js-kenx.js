@@ -8,10 +8,12 @@ exports.up = function (knex) {
       table.increments("id");
       table.string("name");
     })
-    .createTable("accounts", function (table) {
-      table.increments("id");
-      table.string("name");
-      table.integer("user_id").unsigned().unique().references("users.id");
+    .then(function () {
+      knex.schema.createTable("accounts", function (table) {
+        table.increments("id");
+        table.string("name");
+        table.integer("user_id").unsigned().unique().references("users.id");
+      });
     });
 };
 

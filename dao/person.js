@@ -13,3 +13,5 @@ class PersonDAO {
     return id;
   }
 }
+
+module.exports = new PersonDAO();

@@ -1,3 +1,5 @@
+const personService = require("../service/person");
+
 class PersonController {
   async createPerson(req, res) {
     try {

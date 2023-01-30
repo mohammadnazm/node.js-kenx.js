@@ -17,7 +17,6 @@ module.exports = {
       directory: __dirname + "/migrations",
     },
   },
-
   staging: {
     client: "mysql",
     connection: {
@@ -31,7 +30,6 @@ module.exports = {
       directory: __dirname + "/migrations",
     },
   },
-
   production: {
     client: "mysql",
     connection: {
